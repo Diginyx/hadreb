@@ -17,5 +17,5 @@ if platform == 'misty':
 
 if platform == 'cozmo':
    robot_behavior = CozmoBehavior()
-
+   
 robot_behavior.play_behavior()
