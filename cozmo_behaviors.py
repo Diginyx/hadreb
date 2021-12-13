@@ -5,6 +5,7 @@ sys.path.append(os.environ['COZMO'])
 import cozmo
 import random
 import time
+import pickle
 from PIL import Image
 
 
@@ -22,35 +23,47 @@ class CozmoBehavior():
 
     def play_behavior_1(self, robot):      
         #all_actions = [[('display_oled_face_image', 'resources/cozmo_faces/8.png', 2), ('drive_wheels', 25.0, 25.0, 3), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)],[('display_oled_face_image', 'resources/cozmo_faces/14.png', 5),('say_text', 'oi', 3, -0.5625),('set_lift_height', 0.25, 2),('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)]]
-        all_actions = [[('display_oled_face_image', 'resources/cozmo_faces/5.png', 4), ('say_text', 'eyy?', 1, -0.625), ('drive_wheels', 25.0, 0.0, 1), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)], [('display_oled_face_image', 'resources/cozmo_faces/10.png', 2), ('say_text', 'uu?', 2, -0.5625), ('drive_wheels', 75.0, 75.0, 2), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)], [('say_text', 'uu!', 3, -0.25), ('set_lift_height', 0.75, 3), ('drive_wheels', 50.0, 100.0, 3), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)]]
-        for actions in all_actions:
-            for behavior in actions:
-                action = behavior[0]
-                if action == 'display_oled_face_image':
-                    face = behavior[1]
-                    f = Image.open(face).resize(cozmo.oled_face.dimensions(), Image.NEAREST)
-                    f = cozmo.oled_face.convert_image_to_screen_data(f, invert_image=False)
-                    robot.display_oled_face_image(f, behavior[2] * 1000.0, in_parallel=True)               
-                if action == 'say_text':
-                    robot.say_text(behavior[1], play_excited_animation=False, use_cozmo_voice=True, 
-                            duration_scalar=behavior[2], voice_pitch=behavior[3], in_parallel=True, num_retries=1)
-                if action == 'set_lift_height':
-                    robot.set_lift_height(behavior[1], accel=10.0, max_speed=10.0, duration=behavior[2], 
-                            in_parallel=True, num_retries=1)
-                    print("Set lift height: ", robot.lift_height)
-                if action == 'set_head_angle':
-                    robot.set_head_angle(degrees(behavior[1]), accel=10.0, max_speed=10.0, duration=behavior[2], 
-                            warn_on_clamp=True, in_parallel=True, num_retries=1)
-                    print("Head angle: ", robot.head_angle)
-                if action == 'drive_wheels':
-                    robot.drive_wheels(l_wheel_speed=behavior[1], r_wheel_speed=behavior[2], 
-                                    l_wheel_acc=None, r_wheel_acc=None, 
-                                    duration=behavior[3])  
-                    print("left wheel speed: ", robot.left_wheel_speed)
-                    print("right weel speed: ", robot.right_wheel_speed)
-
-            # starting position
-            time.sleep(1.0)
+        cozmo_functions = open("cozmo_functions.pkl", "rb")
+        functions = pickle.load(cozmo_functions)
+        for key, value in functions.items():
+            state = {"key": key,
+                     "lift_height": None,
+                     "head_angle": None,
+                     "left_wheel_speed": None,
+                     "right_wheel_speed": None
+                    }
+            print(value)
+            all_actions = value
+            for actions in all_actions:
+                for behavior in actions:
+                    action = behavior[0]
+                    if action == 'display_oled_face_image':
+                        face = behavior[1]
+                        f = Image.open(face).resize(cozmo.oled_face.dimensions(), Image.NEAREST)
+                        f = cozmo.oled_face.convert_image_to_screen_data(f, invert_image=False)
+                        robot.display_oled_face_image(f, behavior[2] * 1000.0, in_parallel=True)               
+                    if action == 'say_text':
+                        robot.say_text(behavior[1], play_excited_animation=False, use_cozmo_voice=True, 
+                                duration_scalar=behavior[2], voice_pitch=behavior[3], in_parallel=True, num_retries=1)
+                    if action == 'set_lift_height':
+                        robot.set_lift_height(behavior[1], accel=10.0, max_speed=10.0, duration=behavior[2], 
+                                in_parallel=True, num_retries=1)
+                        state['lift_height'] = robot.lift_height
+                    if action == 'set_head_angle':
+                        robot.set_head_angle(degrees(behavior[1]), accel=10.0, max_speed=10.0, duration=behavior[2], 
+                                warn_on_clamp=True, in_parallel=True, num_retries=1)
+                        state['head_angle'] = robot.head_angle
+                    if action == 'drive_wheels':
+                        robot.drive_wheels(l_wheel_speed=behavior[1], r_wheel_speed=behavior[2], 
+                                        l_wheel_acc=None, r_wheel_acc=None, 
+                                        duration=behavior[3])  
+                        state["left_wheel_speed"] = robot.left_wheel_speed
+                        state["right_wheel_speed"] = robot.right_wheel_speed
+                    print(state)
+                    state["left_wheel_speed"] = None
+                    state["right_wheel_speed"] = None
+                # starting position
+                time.sleep(1.0)
         robot.set_lift_height(0, in_parallel=True)
         robot.set_head_angle(degrees(-10.0), in_parallel=True)            
 

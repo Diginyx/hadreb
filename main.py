@@ -7,7 +7,7 @@ import os
 import csv
 import time
 
-platform = 'misty'
+platform = 'cozmo'
 ip = '192.168.0.101' # white misty
 # ip = '192.168.0.155' # black misty
 

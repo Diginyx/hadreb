@@ -7,6 +7,7 @@ import websocket
 import time
 import random
 import time
+import pickle
 from PIL import Image
 
 class Robot:
@@ -75,6 +76,7 @@ class MistyBehavior():
         self.subscribe_to = subscribe_to
         self.current_behaviors = None
         self.ip = ip
+        self.key = None
         t = threading.Thread(target=self.run_websocket)
         t.start()  
 
@@ -95,7 +97,8 @@ class MistyBehavior():
 
     def run_websocket(self):
         def on_message(ws, message):
-            print(message)
+            with open('misty_internal_data.json', 'a') as f:
+                json.dump({"key": self.key, "message": message}, f, indent=2)
 
         def on_error(ws, error):
             print(error)
@@ -118,39 +121,44 @@ class MistyBehavior():
         self.ts = ts
 
     def play_behavior(self):
-        all_actions = [[('move_head', -10, 0, 0, 80)], [('move_head', -10, 0, 0, 80), ('move_head', 0, 0, 0, 80), ('move_arm', 'left', 50, 80), ('move_arm', 'right', 80, 80), ('display_face', 'e_Admiration.jpg', 1), ('say_text', 'umm'), ('move_head', 0, -5, 0, 80), ('drive_track', -28, 24, 1), ('move_head', 0, 0, 0, 80), ('move_arm', 'left', 80, 80), ('move_arm', 'right', 80, 80)]]
-        for actions in all_actions:
-            for behavior in actions:
-                action = behavior[0]
-                if action == 'display_face':
-                    self.robot.display_face(behavior[1], behavior[2])
-                if action == 'say_text':
-                    print(behavior[1])
-                    self.robot.say_text(behavior[1])
-                if action == 'move_arm':
-                    arm = behavior[1]
-                    position = behavior[2]
-                    velocity = behavior[3]
-                    if arm == 'both':
-                        self.robot.move_arm('left',position,velocity=velocity)
-                        self.robot.move_arm('right',position,velocity=velocity)
-                    else:
-                        self.robot.move_arm(arm,position,velocity=velocity)
-                if action == 'move_head':
-                    roll = behavior[1]
-                    pitch = behavior[2]
-                    yaw = behavior[3]
-                    self.robot.move_head(roll, pitch, yaw, velocity=75)
-                if action == 'drive_track':
-                    left_track = behavior[1]
-                    right_track = behavior[2]
-                    duration = behavior[3]
-                    self.robot.drive_track(left_track,right_track)  
-                    time.sleep(duration)
-                    self.robot.stop() 
+        misty_functions = open("misty_functions.pkl", "rb")
+        functions = pickle.load(misty_functions)
+        for key, value in functions.items():
+            self.key = key
+            print(value)
+            all_actions = value
+            for actions in all_actions:
+                for behavior in actions:
+                    action = behavior[0]
+                    if action == 'display_face':
+                        self.robot.display_face(behavior[1], behavior[2])
+                    if action == 'say_text':
+                        print(behavior[1])
+                        self.robot.say_text(behavior[1])
+                    if action == 'move_arm':
+                        arm = behavior[1]
+                        position = behavior[2]
+                        velocity = behavior[3]
+                        if arm == 'both':
+                            self.robot.move_arm('left',position,velocity=velocity)
+                            self.robot.move_arm('right',position,velocity=velocity)
+                        else:
+                            self.robot.move_arm(arm,position,velocity=velocity)
+                    if action == 'move_head':
+                        roll = behavior[1]
+                        pitch = behavior[2]
+                        yaw = behavior[3]
+                        self.robot.move_head(roll, pitch, yaw, velocity=75)
+                    if action == 'drive_track':
+                        left_track = behavior[1]
+                        right_track = behavior[2]
+                        duration = behavior[3]
+                        self.robot.drive_track(left_track,right_track)  
+                        time.sleep(duration)
+                        self.robot.stop() 
 
-            # starting position
-            time.sleep(1.0)
+                # starting position
+                time.sleep(1.0)
 
         self.robot.reset() 
 
