@@ -20,7 +20,6 @@ class CozmoBehavior():
     def set_timestamp(self, ts):
         self.ts = ts
 
-
     def play_behavior_1(self, robot):      
         #all_actions = [[('display_oled_face_image', 'resources/cozmo_faces/8.png', 2), ('drive_wheels', 25.0, 25.0, 3), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)],[('display_oled_face_image', 'resources/cozmo_faces/14.png', 5),('say_text', 'oi', 3, -0.5625),('set_lift_height', 0.25, 2),('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)]]
         all_actions = [[('display_oled_face_image', 'resources/cozmo_faces/5.png', 4), ('say_text', 'eyy?', 1, -0.625), ('drive_wheels', 25.0, 0.0, 1), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)], [('display_oled_face_image', 'resources/cozmo_faces/10.png', 2), ('say_text', 'uu?', 2, -0.5625), ('drive_wheels', 75.0, 75.0, 2), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)], [('say_text', 'uu!', 3, -0.25), ('set_lift_height', 0.75, 3), ('drive_wheels', 50.0, 100.0, 3), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)]]
@@ -38,13 +37,18 @@ class CozmoBehavior():
                 if action == 'set_lift_height':
                     robot.set_lift_height(behavior[1], accel=10.0, max_speed=10.0, duration=behavior[2], 
                             in_parallel=True, num_retries=1)
+                    print("Set lift height: ", robot.lift_height)
                 if action == 'set_head_angle':
                     robot.set_head_angle(degrees(behavior[1]), accel=10.0, max_speed=10.0, duration=behavior[2], 
                             warn_on_clamp=True, in_parallel=True, num_retries=1)
+                    print("Head angle: ", robot.head_angle)
                 if action == 'drive_wheels':
                     robot.drive_wheels(l_wheel_speed=behavior[1], r_wheel_speed=behavior[2], 
                                     l_wheel_acc=None, r_wheel_acc=None, 
                                     duration=behavior[3])  
+                    print("left wheel speed: ", robot.left_wheel_speed)
+                    print("right weel speed: ", robot.right_wheel_speed)
+
             # starting position
             time.sleep(1.0)
         robot.set_lift_height(0, in_parallel=True)
@@ -110,10 +114,7 @@ class CozmoBehavior():
             if bool_choice():         
                 actions.append(('drive_wheels', lw, rw, t))               
                 # robot.drive_wheels(l_wheel_speed=lw, r_wheel_speed=rw, 
-                #                 l_wheel_acc=None, r_wheel_acc=None, 
-                #                 duration=t)   
-
-
+                #     f = 
             # starting position
             time.sleep(1.0)
             actions.append(('set_lift_height', 0, 1))
@@ -121,6 +122,7 @@ class CozmoBehavior():
             actions.append(('set_head_angle', -10, 1, 3))
             # robot.set_head_angle(degrees(-10.0), in_parallel=True)            
             all_actions.append(actions)
+
             
         self.current_behaviors = all_actions
         # self.random_variables = random_variables

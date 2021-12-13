@@ -3,6 +3,7 @@ import sys
 import requests
 import json
 import threading
+import websocket
 import time
 import random
 import time
@@ -54,7 +55,11 @@ class Robot:
 
 class MistyBehavior():
 
-    def __init__(self, ip, face_img_path='resources/misty_faces/'):
+    def __init__(self, ip, face_img_path='resources/misty_faces/', subscribe_to=['Actuator_HeadPitch',
+                                                                                 'Actuator_HeadYaw',
+                                                                                 'Actuator_HeadRoll',
+                                                                                 'Actuator_LeftArm',
+                                                                                 'Actuator_RightArm']):
         self.ts = None
         # self.faces = [face_img_path+f for f in os.listdir(face_img_path) if os.path.isfile(os.path.join(face_img_path, f))]
         self.faces = ['e_Joy2.jpg', "e_Love.jpg",  "e_Sleepy4.jpg",
@@ -67,11 +72,50 @@ class MistyBehavior():
                         "e_SystemCamera.jpg",  "e_TerrorRight.jpg"]
         self.robot = Robot(ip)
         self.robot.set_volume(20.0)
+        self.subscribe_to = subscribe_to
         self.current_behaviors = None
+        self.ip = ip
+        t = threading.Thread(target=self.run_websocket)
+        t.start()  
 
+    def subscribe_msg(self, item):
+        return  {
+        "Operation": "subscribe",
+        "Type": 'ActuatorPosition',
+        "DebounceMs": 100,
+        "EventName": item,
+        "EventConditions": [
+         {
+            "Property": "sensorName",
+            "Inequality": "==",
+            "Value": item
+         }
+        ]
+        }
+
+    def run_websocket(self):
+        def on_message(ws, message):
+            print(message)
+
+        def on_error(ws, error):
+            print(error)
+
+        def on_close(ws):
+            print("### misty socket closed ###")
+
+        def on_open(ws):
+            for item in self.subscribe_to:
+                ws.send(json.dumps(self.subscribe_msg(item)))
+
+        ws = websocket.WebSocketApp("ws://{}/pubsub".format(self.ip),
+                                on_message = on_message,
+                                on_error = on_error,
+                                on_close = on_close)
+        ws.on_open = on_open
+        ws.run_forever()   
+    
     def set_timestamp(self, ts):
         self.ts = ts
-
 
     def play_behavior(self):
         all_actions = [[('move_head', -10, 0, 0, 80)], [('move_head', -10, 0, 0, 80), ('move_head', 0, 0, 0, 80), ('move_arm', 'left', 50, 80), ('move_arm', 'right', 80, 80), ('display_face', 'e_Admiration.jpg', 1), ('say_text', 'umm'), ('move_head', 0, -5, 0, 80), ('drive_track', -28, 24, 1), ('move_head', 0, 0, 0, 80), ('move_arm', 'left', 80, 80), ('move_arm', 'right', 80, 80)]]
