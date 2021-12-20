@@ -4,6 +4,8 @@ sys.path.append('/home/slimlab/git/cozmo-python-sdk/src')
 import cozmo
 import json
 import pickle
+from os import listdir
+from os.path import isfile, join
 from PIL import Image
 from cozmo.util import degrees, distance_mm, speed_mmps
 timestamp = None
@@ -14,8 +16,12 @@ def play_behavior_1(robot):
     #all_actions = [[('display_oled_face_image', 'resources/cozmo_faces/8.png', 2), ('drive_wheels', 25.0, 25.0, 3), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)],[('display_oled_face_image', 'resources/cozmo_faces/14.png', 5),('say_text', 'oi', 3, -0.5625),('set_lift_height', 0.25, 2),('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)]]
     cozmo_functions = open("cozmo_functions.pkl", "rb")
     functions = pickle.load(cozmo_functions)
+    onlyfiles = [f for f in listdir('/home/slimlab/Desktop/josue/robotbehaviordata/cozmo/states') if isfile(join('/home/slimlab/Desktop/josue/robotbehaviordata/cozmo/states', f))]
     for key, value in functions.items():
         timestamp = key
+        if str(timestamp) + '.json' in onlyfiles:
+            print('continuing...')
+            continue
         all_actions = value
         for actions in all_actions:
             for behavior in actions:
