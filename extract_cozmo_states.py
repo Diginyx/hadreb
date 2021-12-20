@@ -1,4 +1,5 @@
 import sys
+import time
 sys.path.append('/home/slimlab/git/cozmo-python-sdk/src')
 import cozmo
 import json
@@ -14,14 +15,7 @@ def play_behavior_1(robot):
     cozmo_functions = open("cozmo_functions.pkl", "rb")
     functions = pickle.load(cozmo_functions)
     for key, value in functions.items():
-        timestampe = key
-        state = {"key": key,
-                    "lift_height": None,
-                    "head_angle": None,
-                    "left_wheel_speed": None,
-                    "right_wheel_speed": None
-                }
-        # print(value)
+        timestamp = key
         all_actions = value
         for actions in all_actions:
             for behavior in actions:
@@ -37,20 +31,13 @@ def play_behavior_1(robot):
                 if action == 'set_lift_height':
                     robot.set_lift_height(behavior[1], accel=10.0, max_speed=10.0, duration=behavior[2], 
                             in_parallel=True, num_retries=1)
-                    state['lift_height'] = robot.lift_height
                 if action == 'set_head_angle':
                     robot.set_head_angle(degrees(behavior[1]), accel=10.0, max_speed=10.0, duration=behavior[2], 
                             warn_on_clamp=True, in_parallel=True, num_retries=1)
-                    state['head_angle'] = robot.head_angle
                 if action == 'drive_wheels':
                     robot.drive_wheels(l_wheel_speed=behavior[1], r_wheel_speed=behavior[2], 
                                     l_wheel_acc=None, r_wheel_acc=None, 
                                     duration=behavior[3])  
-                    state["left_wheel_speed"] = robot.left_wheel_speed
-                    state["right_wheel_speed"] = robot.right_wheel_speed
-                # print(state)
-                state["left_wheel_speed"] = None
-                state["right_wheel_speed"] = None
             # starting position
             time.sleep(1.0)
     robot.set_lift_height(0, in_parallel=True)
@@ -67,6 +54,10 @@ def state_change_update(evt, obj=None, tap_count=None, **kwargs):
     state.update({"robot_id":str(robot.robot_id)})
     # state.update({"time":str(time.time())})
     state.update({'face_count': str(robot.world.visible_face_count())})
+    with open('cozmo/states/' + str(timestamp) + ".json", 'a') as f:
+        json.dump({"timestamp": str(timestamp), "value": json.dumps(state)}, f, indent=2)
+        f.write("\n")
+        f.write("\n")
     print(json.dumps(state))
 
 def cozmo_program(robot: cozmo.robot.Robot):

@@ -60,7 +60,9 @@ class MistyBehavior():
                                                                                  'Actuator_HeadYaw',
                                                                                  'Actuator_HeadRoll',
                                                                                  'Actuator_LeftArm',
-                                                                                 'Actuator_RightArm']):
+                                                                                 'Actuator_RightArm',
+                                                                                 '/Sensors/RTC/IMU',
+                                                                                 'driveEncoders']):
         self.ts = None
         # self.faces = [face_img_path+f for f in os.listdir(face_img_path) if os.path.isfile(os.path.join(face_img_path, f))]
         self.faces = ['e_Joy2.jpg', "e_Love.jpg",  "e_Sleepy4.jpg",
@@ -80,25 +82,35 @@ class MistyBehavior():
         t = threading.Thread(target=self.run_websocket)
         t.start()  
 
-    def subscribe_msg(self, item):
-        return  {
-        "Operation": "subscribe",
-        "Type": 'ActuatorPosition',
-        "DebounceMs": 100,
-        "EventName": item,
-        "EventConditions": [
-         {
-            "Property": "sensorName",
-            "Inequality": "==",
-            "Value": item
-         }
-        ]
-        }
+    def subscribe_msg(self, item, sensor):
+        if sensor == 'actuator':
+            return  {
+            "Operation": "subscribe",
+            "Type": 'ActuatorPosition',
+            "DebounceMs": 100,
+            "EventName": item,
+            "EventConditions": [
+            {
+                "Property": "sensorName",
+                "Inequality": "==",
+                "Value": item
+            }
+            ]
+            }
+        elif sensor == 'imu':
+            return  {
+            "Operation": "subscribe",
+            "Type": 'IMU',
+            "DebounceMs": 100,
+            "EventName": item,
+            }
 
     def run_websocket(self):
         def on_message(ws, message):
-            with open('misty_internal_data.json', 'a') as f:
-                json.dump({"key": self.key, "message": message}, f, indent=2)
+            with open('misty/states/' + str(self.key) + ".json", 'a') as f:
+                json.dump({"timestamp": self.key, "value": message}, f, indent=2)
+                f.write("\n")
+                f.write("\n")
 
         def on_error(ws, error):
             print(error)
@@ -108,7 +120,10 @@ class MistyBehavior():
 
         def on_open(ws):
             for item in self.subscribe_to:
-                ws.send(json.dumps(self.subscribe_msg(item)))
+                if 'Actuator' in item: 
+                   ws.send(json.dumps(self.subscribe_msg(item, 'actuator')))
+                elif 'IMU' in item:
+                    ws.send(json.dumps(self.subscribe_msg(item, 'imu')))
 
         ws = websocket.WebSocketApp("ws://{}/pubsub".format(self.ip),
                                 on_message = on_message,
