@@ -1,365 +1,1031 @@
 {
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:48.5665682Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":80.214091318315241}}"
+  "states": [
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 80.21409131831524, 
+          "created": "2021-12-20T22:09:48.5665682Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 80.21409131831524, 
+          "created": "2021-12-20T22:09:48.5665682Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 0.5729577951308232, 
+          "created": "2021-12-20T22:09:48.5665682Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:48.5665682Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.864788975654116, 
+          "created": "2021-12-20T22:09:48.5665682Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:48.6452568Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.0, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.0, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 80.21409131831524, 
+          "created": "2021-12-20T22:09:48.8020701Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 80.21409131831524, 
+          "created": "2021-12-20T22:09:48.8020701Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 0.5729577951308232, 
+          "created": "2021-12-20T22:09:48.8020701Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:48.8020701Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:48.8020701Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:48.8177135Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": -0.05729577951308232, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.0, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.11459155902616464, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 73.9115555718762, 
+          "created": "2021-12-20T22:09:48.9758741Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 71.6197243913529, 
+          "created": "2021-12-20T22:09:48.9758741Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 1.7188733853924696, 
+          "created": "2021-12-20T22:09:48.9758741Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:48.9758741Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:48.9915076Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:48.9915076Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": -0.05729577951308232, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.6302535746439055, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 52.71211715203574, 
+          "created": "2021-12-20T22:09:49.1687023Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 49.847328176381616, 
+          "created": "2021-12-20T22:09:49.1687023Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 1.7188733853924696, 
+          "created": "2021-12-20T22:09:49.1687023Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:49.1687023Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:49.1687023Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:49.1687023Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.0, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.0, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:49.3604739Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.05729577951308232, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.0, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 37.81521447863434, 
+          "created": "2021-12-20T22:09:49.3761047Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 36.66929888837269, 
+          "created": "2021-12-20T22:09:49.3761047Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 1.7188733853924696, 
+          "created": "2021-12-20T22:09:49.3761047Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:49.3761047Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:49.3761047Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:49.5346763Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.11459155902616464, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.0, 
+          "sensorId": "imu", 
+          "pitchVelocity": -0.17188733853924698, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 41.8259190445501, 
+          "created": "2021-12-20T22:09:49.5660033Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 42.97183463481174, 
+          "created": "2021-12-20T22:09:49.5660033Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 1.1459155902616465, 
+          "created": "2021-12-20T22:09:49.5816288Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:49.5816288Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:49.5816288Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:49.6912182Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.05729577951308232, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.0, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 46.40958140559668, 
+          "created": "2021-12-20T22:09:49.8633846Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 46.9825392007275, 
+          "created": "2021-12-20T22:09:49.8633846Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 0.5729577951308232, 
+          "created": "2021-12-20T22:09:49.8633846Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:49.8633846Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.864788975654116, 
+          "created": "2021-12-20T22:09:49.8633846Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:49.8790091Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": -0.05729577951308232, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.0, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.0, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 46.40958140559668, 
+          "created": "2021-12-20T22:09:49.9883934Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 46.9825392007275, 
+          "created": "2021-12-20T22:09:49.9883934Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 0.5729577951308232, 
+          "created": "2021-12-20T22:09:49.9883934Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:49.9883934Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:49.9883934Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:50.050892Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": -0.11459155902616464, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.0, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.2864788975654116, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 55.00394833255903, 
+          "created": "2021-12-20T22:09:50.1614138Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 55.57690612768985, 
+          "created": "2021-12-20T22:09:50.1614138Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 1.7188733853924696, 
+          "created": "2021-12-20T22:09:50.1614138Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:50.1614138Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:50.1614138Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:50.2244683Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.05729577951308232, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.0, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 77.34930234266115, 
+          "created": "2021-12-20T22:09:50.3659912Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 78.49521793292278, 
+          "created": "2021-12-20T22:09:50.3659912Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 1.7188733853924696, 
+          "created": "2021-12-20T22:09:50.3659912Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:50.3659912Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:50.3659912Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:50.3975723Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.05729577951308232, 
+          "sensorId": "imu", 
+          "pitchVelocity": -0.11459155902616464, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 83.6518380891002, 
+          "created": "2021-12-20T22:09:50.6020203Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 83.6518380891002, 
+          "created": "2021-12-20T22:09:50.6020203Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 1.7188733853924696, 
+          "created": "2021-12-20T22:09:50.6020203Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:50.6020203Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:50.6020203Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:50.6020203Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": 0.0, 
+          "sensorId": "imu", 
+          "pitchVelocity": 0.11459155902616464, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_RightArm", 
+        "message": {
+          "actuatorId": "dYV1Vt", 
+          "sensorId": "ara", 
+          "rawValue": null, 
+          "value": 83.6518380891002, 
+          "created": "2021-12-20T22:09:50.7586261Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_LeftArm", 
+        "message": {
+          "actuatorId": "NBQEA0", 
+          "sensorId": "ala", 
+          "rawValue": null, 
+          "value": 83.07888029396936, 
+          "created": "2021-12-20T22:09:50.7586261Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadPitch", 
+        "message": {
+          "actuatorId": "Awb61F", 
+          "sensorId": "ahp", 
+          "rawValue": null, 
+          "value": 1.1459155902616465, 
+          "created": "2021-12-20T22:09:50.7586261Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadRoll", 
+        "message": {
+          "actuatorId": "QSygCx", 
+          "sensorId": "ahr", 
+          "rawValue": null, 
+          "value": 4.010704565915763, 
+          "created": "2021-12-20T22:09:50.7586261Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "Actuator_HeadYaw", 
+        "message": {
+          "actuatorId": "2ABzJD", 
+          "sensorId": "ahy", 
+          "rawValue": null, 
+          "value": -2.291831180523293, 
+          "created": "2021-12-20T22:09:50.7586261Z"
+        }
+      }
+    }, 
+    {
+      "timestamp": "1633715969.9248605", 
+      "value": {
+        "eventName": "/Sensors/RTC/IMU", 
+        "message": {
+          "created": "2021-12-20T22:09:50.7586261Z", 
+          "xAcceleration": 0.14, 
+          "yaw": 238.8088090105271, 
+          "zAcceleration": -9.8, 
+          "yawVelocity": 0.0, 
+          "yAcceleration": -0.25, 
+          "pitch": 1.432394487827058, 
+          "rollVelocity": -0.05729577951308232, 
+          "sensorId": "imu", 
+          "pitchVelocity": -0.05729577951308232, 
+          "roll": 0.7448451336700703
+        }
+      }
+    }
+  ]
 }
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:48.5665682Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":80.214091318315241}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:48.5665682Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":0.57295779513082323}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:48.5665682Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:48.5665682Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.8647889756541161}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:48.6452568Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.0,\"roll\":0.74484513367007033,\"rollVelocity\":0.0,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:48.8020701Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":80.214091318315241}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:48.8020701Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":80.214091318315241}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:48.8020701Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":0.57295779513082323}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:48.8020701Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:48.8020701Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:48.8177135Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.11459155902616464,\"roll\":0.74484513367007033,\"rollVelocity\":0.0,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":-0.057295779513082318,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:48.9758741Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":73.9115555718762}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:48.9758741Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":71.6197243913529}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:48.9758741Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":1.7188733853924696}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:48.9758741Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:48.9915076Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:48.9915076Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.63025357464390552,\"roll\":0.74484513367007033,\"rollVelocity\":-0.057295779513082318,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:49.1687023Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":52.712117152035738}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:49.1687023Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":49.847328176381616}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:49.1687023Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":1.7188733853924696}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:49.1687023Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:49.1687023Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:49.1687023Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.0,\"roll\":0.74484513367007033,\"rollVelocity\":0.0,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:49.3604739Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.0,\"roll\":0.74484513367007033,\"rollVelocity\":0.057295779513082318,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:49.3761047Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":37.815214478634338}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:49.3761047Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":36.669298888372687}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:49.3761047Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":1.7188733853924696}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:49.3761047Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:49.3761047Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:49.5346763Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":-0.17188733853924698,\"roll\":0.74484513367007033,\"rollVelocity\":0.0,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.11459155902616464,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:49.5660033Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":41.8259190445501}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:49.5660033Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":42.971834634811742}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:49.5816288Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":1.1459155902616465}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:49.5816288Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:49.5816288Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:49.6912182Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.0,\"roll\":0.74484513367007033,\"rollVelocity\":0.057295779513082318,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:49.8633846Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":46.409581405596683}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:49.8633846Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":46.9825392007275}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:49.8633846Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":0.57295779513082323}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:49.8633846Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:49.8633846Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.8647889756541161}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:49.8790091Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.0,\"roll\":0.74484513367007033,\"rollVelocity\":0.0,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":-0.057295779513082318,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:49.9883934Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":46.409581405596683}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:49.9883934Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":46.9825392007275}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:49.9883934Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":0.57295779513082323}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:49.9883934Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:49.9883934Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:50.050892Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.28647889756541162,\"roll\":0.74484513367007033,\"rollVelocity\":0.0,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":-0.11459155902616464,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:50.1614138Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":55.003948332559027}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:50.1614138Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":55.576906127689853}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:50.1614138Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":1.7188733853924696}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:50.1614138Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:50.1614138Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:50.2244683Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.0,\"roll\":0.74484513367007033,\"rollVelocity\":0.057295779513082318,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:50.3659912Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":77.349302342661147}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:50.3659912Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":78.495217932922785}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:50.3659912Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":1.7188733853924696}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:50.3659912Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:50.3659912Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:50.3975723Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":-0.11459155902616464,\"roll\":0.74484513367007033,\"rollVelocity\":0.057295779513082318,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:50.6020203Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":83.6518380891002}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:50.6020203Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":83.6518380891002}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:50.6020203Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":1.7188733853924696}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:50.6020203Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:50.6020203Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:50.6020203Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":0.11459155902616464,\"roll\":0.74484513367007033,\"rollVelocity\":0.0,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_RightArm\",\"message\":{\"actuatorId\":\"dYV1Vt\",\"created\":\"2021-12-20T22:09:50.7586261Z\",\"rawValue\":null,\"sensorId\":\"ara\",\"value\":83.6518380891002}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_LeftArm\",\"message\":{\"actuatorId\":\"NBQEA0\",\"created\":\"2021-12-20T22:09:50.7586261Z\",\"rawValue\":null,\"sensorId\":\"ala\",\"value\":83.078880293969362}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadPitch\",\"message\":{\"actuatorId\":\"Awb61F\",\"created\":\"2021-12-20T22:09:50.7586261Z\",\"rawValue\":null,\"sensorId\":\"ahp\",\"value\":1.1459155902616465}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadRoll\",\"message\":{\"actuatorId\":\"QSygCx\",\"created\":\"2021-12-20T22:09:50.7586261Z\",\"rawValue\":null,\"sensorId\":\"ahr\",\"value\":4.0107045659157627}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"Actuator_HeadYaw\",\"message\":{\"actuatorId\":\"2ABzJD\",\"created\":\"2021-12-20T22:09:50.7586261Z\",\"rawValue\":null,\"sensorId\":\"ahy\",\"value\":-2.2918311805232929}}"
-}
-
-{
-  "timestamp": "1633715969.9248605",
-  "value": "{\"eventName\":\"/Sensors/RTC/IMU\",\"message\":{\"created\":\"2021-12-20T22:09:50.7586261Z\",\"pitch\":1.432394487827058,\"pitchVelocity\":-0.057295779513082318,\"roll\":0.74484513367007033,\"rollVelocity\":-0.057295779513082318,\"sensorId\":\"imu\",\"xAcceleration\":0.14,\"yAcceleration\":-0.25,\"yaw\":238.80880901052711,\"yawVelocity\":0.0,\"zAcceleration\":-9.8}}"
-}
-
