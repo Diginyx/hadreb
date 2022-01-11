@@ -3,46 +3,46 @@
 The repository is organized into 8 different folders:
 
 - analyses
-  - Jupyter notebook containing code used to analyze data
+    - Jupyter notebook containing code used to analyze data
 - cozmo (files organized and named by timestamp (ID) of behavior; not all functions will have state information and vice versa)
-  -  Function folder containing text files listing the functions that were ran for a behavior 
-  -  States folder containing json files listing the internal state changes of Cozmo while behavior was running
+    -  Function folder containing text files listing the functions that were ran for a behavior 
+    -  States folder containing json files listing the internal state changes of Cozmo while behavior was running
 - misty (files named by timestamp (ID) of behavior; not all functions will have state information and vice versa)
-   -  Function folder containing text files listing the functions that were ran for a behavior 
-   -  States folder containing json files listing the internal state changes of Misty while behavior was running
+    -  Function folder containing text files listing the functions that were ran for a behavior 
+    -  States folder containing json files listing the internal state changes of Misty while behavior was running
 - cozmo_Filtered (files named by timestamp (ID) of behavior; all functions will have state information and vice versa)
-  - Function folder containing text files listing the functions that were ran for a behavior 
-  -  States folder containing json files listing the internal state changes of Cozmo while behavior was running
--  misty_Filtered (files named by timestamp (ID) of behavior; all functions will have state information and vice versa)
-   -  Function folder containing text files listing the functions that were ran for a behavior 
-   -  States folder containing json files listing the internal state changes of Misty while behavior was running
--  raw_data
-   -  cozmo_functions.pkl and misty_functions.pkl
-      -  pkl files which contains dictionary that maps behavior timestamps to functions used to run behavior for Cozmo and Misty
-   -  cozmo_filtered_data.pkl and misty_filtered_data.pkl
-      -  pkl files containing dataframes of cleaned data for Cozmo and Misty
-   -  cozmo_states.pkl and misty_states.pkl
-      -  pkl files containing dataframes of internal state data for Cozmo and Misty
-   -  functions_cozmo.txt and functions_misty.txt
-      -  text files which contains all functions of every behavior ran labeled by behavior's timestamps
-   -  response_cozmo copy.csv and response_misty copy.csv
-      -  csv file containing descriptions and affect labels for each behavior labled by behavior's timestamps
--  resources
-   -  cozmo_faces folder containing images used to generate Cozmo's faces
-   -  misty_faces_black folder containing images used to generate black Misty's faces
-   -  misty_faces_white folder containing images used to generate white Misty's faces
--  src
-   -  extract_cozmo_states.py
-      -  runs all Cozmo behaviors and extract internal state data
-   -  extract_misty_states.py
-      - runs all Misty behaviors and extract internal state data
-   -  main.py
-      -  driver code used to run extract_misty_states.py
-   -  novikova.py
-      -  maps internal robot states to novikova features
-   -  MapFunctionsToInternalStates.ipynb
-      -  used to create cozmo_functions.pkl and misty_functions.pkl files organizing behavior timestamps to array of functions
-   -  semdial2020_model.ipynb
-      -  model used to map internal states to emotions
-   - zero-shot.ipynb
-      -  BART model used for zero-shot learning task mapping descriptions to emotions
+    - Function folder containing text files listing the functions that were ran for a behavior 
+    - States folder containing json files listing the internal state changes of Cozmo while behavior was running
+- misty_Filtered (files named by timestamp (ID) of behavior; all functions will have state information and vice versa)
+    -  Function folder containing text files listing the functions that were ran for a behavior 
+    -  States folder containing json files listing the internal state changes of Misty while behavior was running
+- raw_data
+    -  cozmo_functions.pkl and misty_functions.pkl
+        - pkl files containing dictionary that maps behavior timestamps to functions used to run behavior for Cozmo and Misty
+    -  cozmo_filtered_data.pkl and misty_filtered_data.pkl
+        - pkl files containing dataframes of cleaned data for Cozmo and Misty
+    -  cozmo_states.pkl and misty_states.pkl
+        - pkl files containing dataframes of internal state data for Cozmo and Misty
+    -  functions_cozmo.txt and functions_misty.txt
+        - text files containing all functions of every behavior ran labeled by behavior's timestamps
+    -  response_cozmo copy.csv and response_misty copy.csv
+        - csv file containing descriptions and affect labels for each behavior labled by behavior's timestamps
+- resources
+    -  cozmo_faces folder containing images used to generate Cozmo's faces
+    -  misty_faces_black folder containing images used to generate black Misty's faces
+    -  misty_faces_white folder containing images used to generate white Misty's faces
+- src
+    -  extract_cozmo_states.py
+        - runs all Cozmo behaviors and extract internal state data
+    -  extract_misty_states.py
+        - runs all Misty behaviors and extract internal state data
+    -  main.py
+        - driver code used to run extract_misty_states.py
+    -  novikova.py
+        - maps internal robot states to novikova features
+    -  MapFunctionsToInternalStates.ipynb
+        - used to create cozmo_functions.pkl and misty_functions.pkl files organizing behavior timestamps to array of functions
+    -  semdial2020_model.ipynb
+        - model used to map internal states to emotions
+    - zero-shot.ipynb
+        - BART model used for zero-shot learning task mapping descriptions to emotions
