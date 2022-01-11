@@ -13,7 +13,6 @@ timestamp = None
 
 def play_behavior_1(robot):     
     global timestamp
-    #all_actions = [[('display_oled_face_image', 'resources/cozmo_faces/8.png', 2), ('drive_wheels', 25.0, 25.0, 3), ('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)],[('display_oled_face_image', 'resources/cozmo_faces/14.png', 5),('say_text', 'oi', 3, -0.5625),('set_lift_height', 0.25, 2),('set_lift_height', 0, 1), ('set_head_angle', -10, 1, 3)]]
     cozmo_functions = open("cozmo_functions.pkl", "rb")
     functions = pickle.load(cozmo_functions)
     onlyfiles = [f for f in listdir('/home/slimlab/Desktop/josue/robotbehaviordata/cozmo/states') if isfile(join('/home/slimlab/Desktop/josue/robotbehaviordata/cozmo/states', f))]
