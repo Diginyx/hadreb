@@ -25,8 +25,6 @@ The repository is organized into 8 different folders:
         - pkl files containing dataframes of internal state data for Cozmo and Misty
     -  functions_cozmo.txt and functions_misty.txt
         - text files containing all functions of every behavior ran labeled by behavior's timestamps
-    -  response_cozmo copy.csv and response_misty copy.csv
-        - csv file containing descriptions and affect labels for each behavior labled by behavior's timestamps
 - resources
     -  cozmo_faces folder containing images used to generate Cozmo's faces
     -  misty_faces_black folder containing images used to generate black Misty's faces
